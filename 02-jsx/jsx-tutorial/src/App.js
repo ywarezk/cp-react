@@ -139,8 +139,8 @@ function App() {
           // ]
 
           grocery.map(
-            function(singleItem) {
-              return (<li>{singleItem}</li>)
+            function(singleItem, index) {
+              return (<li key={index}>{singleItem}</li>)
             }
           )
 

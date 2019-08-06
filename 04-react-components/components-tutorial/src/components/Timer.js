@@ -2,11 +2,11 @@ import React from 'react';
 
 export default class Timer extends React.Component {
     state = {
-        current: 10
+        current: 5
     }
 
     componentDidMount() {
-        setInterval(() => {
+        this.intervalId = setInterval(() => {
             this.setState((currentState) => {
                 return {
                     current: currentState.current -1
@@ -15,9 +15,21 @@ export default class Timer extends React.Component {
         }, 1000);
     }
 
+    componentDidUpdate() {
+        if (this.state.current === 0) {
+            this.props.cb();
+        }
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
+    }
+
     render() {
         return (
-            <h1>{this.state.current}</h1>
+            <div>
+                <h1>{this.state.current}</h1>
+            </div>
         )
     }
 }
