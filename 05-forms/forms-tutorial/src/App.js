@@ -3,6 +3,8 @@ import './App.css';
 import Login from './components/Login';
 import LoginControlled from './components/LoginControlled';
 import RegisterControlled from './components/Register';
+import LoginRenderProps from './components/LoginRenderProps';
+import LoginFormik from './components/LoginFormik';
 
 function App() {
   return (
@@ -17,6 +19,12 @@ function App() {
             <LoginControlled />
 
             <RegisterControlled />
+
+            <h1>Render props</h1>
+            <LoginRenderProps />
+
+            <h1>Formik</h1>
+            <LoginFormik />
           </div>
         </div>
       </div>
