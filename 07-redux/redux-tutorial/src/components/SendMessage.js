@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field} from 'formik';
-import {setMessage} from '../redux/actions';
+import {setMessage} from '../redux/actions/hello.actions';
 import {connect} from 'react-redux';
 
 const SendMessage = (props) => {

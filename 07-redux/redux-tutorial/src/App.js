@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import SendMessage from './components/SendMessage';
 import GetMessage from './components/GetMessage';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
               <GetMessage />
             </div>
           
+            <div className="col-6">
+              <TodoList />
+            </div>
         </div>
       </div>
     </div>

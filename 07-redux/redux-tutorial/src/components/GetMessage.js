@@ -13,7 +13,7 @@ import {connect} from 'react-redux';
  export default connect(
    function(state) {
       return {
-         messageFromState: state.message
+         messageFromState: state.helloWorld.message
       }
    }
  )(GetMessage);
